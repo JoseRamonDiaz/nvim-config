@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/completion-nvim'
   Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
   Plug 'williamboman/nvim-lsp-installer'
-  Plug 'mfussenegger/nvim-jdtls'
+"  Plug 'mfussenegger/nvim-jdtls'
   " Treesitter
   Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
@@ -21,6 +21,7 @@ call plug#end()
 " LSP configuration
 lua << EOF
   --require'lspconfig'.jdtls.setup{}
+  require('plugins')
   require("nvim-lsp-installer").setup {}
 EOF
 
